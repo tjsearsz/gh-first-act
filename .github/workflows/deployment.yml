@@ -27,6 +27,7 @@ jobs:
       - name: Run tests
         run: pnpm test
   deploy:
+    needs: test # [test, job2]
     runs-on: ubuntu-latest
     steps:
       - name: Get code
