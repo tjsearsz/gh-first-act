@@ -4,8 +4,17 @@ on:
     branches:
       - main
       - dev
+
+env:
+  MONGODB_DB_NAME: gha-demo
+
 jobs:
   test:
+    env:
+      MONGODB_CLUSTER_ADDRESS: cluster0.15.afefsfes
+      MONGODB_USERNAME: maximilian
+      MONGODB_PASSWORD: password
+      PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
     steps:
@@ -29,5 +38,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output information
-        run: |        
+        run: |
           echo "..."
