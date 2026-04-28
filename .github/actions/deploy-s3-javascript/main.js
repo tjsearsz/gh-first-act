@@ -1,8 +1,7 @@
-const core = require("./@actions/core");
-const exec = require("./@actions/exec");
-
 async function run() {
-  const github = await import("./@actions/github");
+  const core = await import("@actions/core");
+  const github = await import("@actions/github");
+  const exec = await import("@actions/exec");
   core.notice("Hello from my custom JavaScript Action!");
 }
 

@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ncc build main.js -o dist && shx mv dist/index.js dist/main.js"
+    "build": "ncc build main.js -m -o dist && shx mv dist/index.js dist/main.js"
   },
   "keywords": [],
   "author": "",

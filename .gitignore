@@ -8,7 +8,13 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules/
-dist
+
+#This is all dist folders
+# dist
+
+#this is ALL ROOT dist folders  (WRITTEN WITHOUT SPACE) ignores only the repository root dist
+/dist
+
 dist-ssr
 *.local
 
@@ -24,3 +30,8 @@ dist-ssr
 *.sw?
 
 github-old/
+
+!.github/**/dist/
+
+#re include all contents (this is another way)
+# !.github/**/dist/**
