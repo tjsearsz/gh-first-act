@@ -63,6 +63,7 @@ jobs:
       - name: Output contents
         run: ls
       - name: Deploy site
+        id: deploy
         uses: ./.github/actions/deploy-s3-javascript
         # env:
         # AWS_ACCESS_KEY_ID: asdfadfafsfas
@@ -73,3 +74,7 @@ jobs:
           bucket: my-super-bucket
           dist-folder: ./dist
           # bucket-region: us-east-2
+
+      - name: Output information
+        run: |
+          echo "Live URL: ${{ steps.deploy.outputs.website-url }}"
